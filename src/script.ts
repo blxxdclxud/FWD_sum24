@@ -1,4 +1,4 @@
-import dayjs, { Dayjs, ConfigType } from 'dayjs';
+import dayjs, {Dayjs} from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime'
 
 dayjs.extend(relativeTime);
@@ -24,9 +24,7 @@ async function fetchComicID(): Promise<number> {
 
     const resp: Response = await fetch(url + "?" + params.toString());
 
-    const data: number = await resp.json();
-
-    return data;
+    return await resp.json();
 }
 
 async function fetchImage(): Promise<ComicData> {
