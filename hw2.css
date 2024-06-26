@@ -23,10 +23,14 @@ h2 {
 
 .container {
     position: relative;
+    display: flex;
     margin-top: 3em;
+    justify-content: center;
+    justify-items: center;
 }
 
-.comic {
+
+.container div {
     text-align: center;
 }
 
