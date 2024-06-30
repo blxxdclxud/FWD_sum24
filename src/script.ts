@@ -1,7 +1,4 @@
-import dayjs, {Dayjs} from 'dayjs';
-import relativeTime from 'dayjs/plugin/relativeTime'
-
-dayjs.extend(relativeTime);
+import { format, formatDistanceToNow } from 'date-fns';
 
 export interface ComicData {
     month: string;
@@ -57,8 +54,7 @@ function display(data: ComicData): void {
     const released: Date = new Date(parseInt(data.year), parseInt(data.month) - 1, parseInt(data.day));
     date.textContent = released.toLocaleDateString();
 
-    const daysAgo: Dayjs = dayjs(date.textContent);
-    ago.textContent = "Released " + dayjs(daysAgo).fromNow();
+    ago.textContent = "Released " + formatDistanceToNow(released, { addSuffix: true });
 }
 
 async function showComic(): Promise<void> {
