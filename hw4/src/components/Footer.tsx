@@ -1,10 +1,10 @@
 import React from 'react';
-import '..//hw2.css'
+import '..//portfolio.css'
 
 const Footer: React.FC = () => {
     return (
         <footer className="footer">
-            <h3>"Thanks for attention"</h3>
+            <h3>&lsquo;Thanks for attention&rsquo;</h3>
         </footer>
     );
 };

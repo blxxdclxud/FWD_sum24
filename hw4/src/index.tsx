@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './hw2.css'
+import "./comic.css"
+import "./portfolio.css"
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

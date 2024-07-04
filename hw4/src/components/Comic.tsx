@@ -1,8 +1,9 @@
 // src/components/Comic.tsx
 
-import React, { useEffect, useState } from 'react';
-import { formatDistanceToNow } from 'date-fns';
-import './hw2.css'; // Import your CSS file
+import React, {useEffect, useState} from 'react';
+import {formatDistanceToNow} from 'date-fns';
+import '../comic.css';
+import Contacts from './Contacts'
 
 interface ComicData {
     month: string;
@@ -28,8 +29,7 @@ const Comic: React.FC = () => {
             if (!response.ok) {
                 throw new Error('Failed to fetch comic ID');
             }
-            const id: number = await response.json();
-            return id;
+            return await response.json();
         };
 
         const fetchComic = async (id: number): Promise<ComicData> => {
@@ -37,8 +37,7 @@ const Comic: React.FC = () => {
             if (!response.ok) {
                 throw new Error('Failed to fetch comic data');
             }
-            const comicData: ComicData = await response.json();
-            return comicData;
+            return await response.json();
         };
 
         const fetchAndSetComic = async (): Promise<void> => {
@@ -69,13 +68,21 @@ const Comic: React.FC = () => {
     const releasedDate: Date = new Date(parseInt(comic.year), parseInt(comic.month) - 1, parseInt(comic.day));
 
     return (
-        <div className="comic">
-            <img id="img" src={comic.img} alt={comic.alt} />
-            <h1 id="comic-title">{comic.safe_title}</h1>
-            <p id="date">Released on: {releasedDate.toLocaleDateString()}</p>
-            <p id="ago">Released {formatDistanceToNow(releasedDate, { addSuffix: true })}</p>
+        <div>
+        <div className="container">
+            <div className="comic">
+                <img id="img" src={comic.img} alt={comic.alt}/>
+                <h1 id="comic-title">{comic.safe_title}</h1>
+                <p id="date">Released on: {releasedDate.toLocaleDateString()}</p>
+                <p id="ago">Released {formatDistanceToNow(releasedDate, {addSuffix: true})}</p>
+            </div>
         </div>
-    );
+
+        <Contacts/>
+        </div>
+
+    )
+        ;
 };
 
 export default Comic;
