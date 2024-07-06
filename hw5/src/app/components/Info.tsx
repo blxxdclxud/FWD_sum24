@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Contacts from "./Contacts";
 import Image from "next/image";
-import profilePic from "../../../public/profile-pic.png"
+import profilePic from "../../../public/profile-pic.png";
 
 const Info: React.FC = () => {
   return (

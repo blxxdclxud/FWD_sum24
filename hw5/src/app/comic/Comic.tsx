@@ -5,7 +5,6 @@ import { formatDistanceToNow } from "date-fns";
 import Contacts from "../components/Contacts";
 import Image from "next/image";
 
-
 interface ComicData {
   month: string;
   num: number;
@@ -82,7 +81,7 @@ const Comic: React.FC = () => {
       <div className="container">
         <div>
           <div className="image-wrapper">
-            <Image id="img" src={comic.img} alt={comic.alt} fill={true}/>
+            <Image id="img" src={comic.img} alt={comic.alt} fill={true} />
           </div>
 
           <h1 id="comic-title">{comic.safe_title}</h1>
