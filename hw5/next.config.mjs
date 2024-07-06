@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/FWD_Sum24/hw5/out",
+  basePath: "/blxxdclxud.github.io/hw5/out",
   output: "export",
   reactStrictMode: true,
   images: {
