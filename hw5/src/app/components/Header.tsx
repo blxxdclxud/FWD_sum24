@@ -7,22 +7,22 @@ const Header: React.FC = () => {
       <nav className="navigation">
         <ul>
           <li>
-            <Link href="/#info" scroll={false}>
+            <Link href="/#info">
               About
             </Link>
           </li>
           <li>
-            <Link href="/#skills" scroll={false}>
+            <Link href="/#skills">
               Skills
             </Link>
           </li>
           <li>
-            <Link href="/#projects" scroll={false}>
+            <Link href="/#projects">
               Projects
             </Link>
           </li>
           <li>
-            <Link href="/#contacts" scroll={false}>
+            <Link href="/#contacts">
               Contacts
             </Link>
           </li>
