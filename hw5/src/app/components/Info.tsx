@@ -9,15 +9,19 @@ import {
   faGitAlt,
 } from "@fortawesome/free-brands-svg-icons";
 import Contacts from "./Contacts";
+import Image from "next/image";
+import profilePic from "../../../public/profile-pic.png"
 
 const Info: React.FC = () => {
   return (
     <div>
       {/* Bio Section */}
       <section id="photo">
-        <img
-          src="/profile-pic.png"
+        <Image
+          src={profilePic}
           alt="Ramazan Nazmiev"
+          width={200}
+          height={300}
           className="profile-img"
         />
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
@@ -6,19 +7,19 @@ const Header: React.FC = () => {
       <nav className="navigation">
         <ul>
           <li>
-            <a href="/#info">About</a>
+            <Link href="/#info" scroll={false}>About</Link>
           </li>
           <li>
-            <a href="/#skills">Skills</a>
+            <Link href="/#skills" scroll={false}>Skills</Link>
           </li>
           <li>
-            <a href="/#projects">Projects</a>
+            <Link href="/#projects" scroll={false}>Projects</Link>
           </li>
           <li>
-            <a href="/#contacts">Contacts</a>
+            <Link href="/#contacts" scroll={false}>Contacts</Link>
           </li>
           <li>
-            <a href="/comic">Comic</a>
+            <Link href="//comic">Comic</Link>
           </li>
         </ul>
       </nav>
