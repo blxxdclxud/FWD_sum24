@@ -2,7 +2,7 @@
 const nextConfig = {
   assetPrefix:
     process.env.NODE_ENV === "production" ? "/blxxdclxud.github.io/hw5/" : "",
-  output: 'export',
+  output: "export",
   trailingSlash: true,
   reactStrictMode: true,
 };
