@@ -19,7 +19,7 @@ const Header: React.FC = () => {
             <Link href="/#contacts">Contacts</Link>
           </li>
           <li>
-            <Link href="//comic">Comic</Link>
+            <Link href="/comic">Comic</Link>
           </li>
         </ul>
       </nav>
