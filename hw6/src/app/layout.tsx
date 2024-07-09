@@ -3,9 +3,10 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import './globals.css';
+import ico from '../../public/favicon.ico';
 
 export const metadata = {
-	icon: './favicon.ico',
+	icon: ico,
 	authors: [{ name: 'Ramazan Nazmiev' }],
 };
 
